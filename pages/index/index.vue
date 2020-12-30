@@ -10,7 +10,7 @@
 			<button  class="header-button">搜索</button>
 		</view>
 		<!-- navContainer -->
-		<scroll-view class="nav-container" scroll-x="">
+		<scroll-view class="nav-container" scroll-x="" v-if="indexData.kingKongModule">
 			<view class="nav-item active" >
 				推荐
 			</view>
