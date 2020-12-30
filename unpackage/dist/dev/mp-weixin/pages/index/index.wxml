@@ -1,0 +1,1 @@
+<view class="header-container"><image class="header-image" src="../../static/images/logo.png"></image><view class="header-input-contaniner"><view class="iconfont icon-sousuo"></view><input class="header-search" type="text" value="" placeholder="搜索商品" placeholder-class="placeholder"/></view><button class="header-button">搜索</button></view>

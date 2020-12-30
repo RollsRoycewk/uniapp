@@ -1,0 +1,39 @@
+.header-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20rpx 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-image {
+  width: 140rpx;
+  height: 40rpx;
+  margin: 0 20rpx;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.header-input-contaniner {
+  width: 100%;
+  height: 60rpx;
+  background: #ededed;
+  border-radius: 10rpx;
+}
+.header-input-contaniner .placeholder {
+  font-size: 24rpx;
+  text-align: center;
+}
+.header-button {
+  width: 144rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 24rpx;
+}
+
