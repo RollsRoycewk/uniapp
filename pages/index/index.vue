@@ -18,12 +18,25 @@
 				{{item.text}}
 			</view>
 		</scroll-view>
+		<!-- 轮播图 -->
+		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" circular>
+			<swiper-item>
+				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
+			</swiper-item>
+		</swiper>
 	</view>
 
 	
 </template>
 
 <script>
+	import ajax from "../../util/ajax.js"
 	export default {
 		data() {
 			return {
@@ -34,13 +47,7 @@
 			
 		},
 		async mounted() {
-			const indexData = await uni.request({
-				url:"http://wangkai.zone:3579/index",
-				// success(val) {
-				// 	console.log(val)
-				// }
-			})
-			this.indexData = indexData[1].data
+			this.indexData = await ajax("http://wangkai.zone:3579/index")
 		}
 	}
 </script>
