@@ -3,7 +3,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 20rpx 0;
+  margin-top: 20rpx;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -35,5 +35,27 @@
       -ms-flex-negative: 0;
           flex-shrink: 0;
   font-size: 24rpx;
+}
+.nav-container {
+  white-space: nowrap;
+}
+.nav-container .nav-item {
+  display: inline-block;
+  width: 140rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  position: relative;
+}
+.nav-container .nav-item.active::after {
+  display: block;
+  width: 100%;
+  height: 2rpx;
+  background-color: #f00;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2rpx;
 }
 
