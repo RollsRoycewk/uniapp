@@ -60,9 +60,21 @@
 		height 60upx
 		background #ededed
 		border-radius 10upx
+		position relative
+		.iconfont
+			position absolute
+			left 20upx
+			top 50%
+			transform translateY(-50%)
+		.header-search
+			margin-left 60upx
+			font-size 24upx
+			height 60upx
 		.placeholder
 			font-size 24upx
 			text-align center
+			text-indent -60upx
+			
 	.header-button
 		width 144rpx
 		height 60upx
