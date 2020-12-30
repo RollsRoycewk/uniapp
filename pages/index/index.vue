@@ -19,24 +19,17 @@
 			</view>
 		</scroll-view>
 		<!-- 轮播图 -->
-		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" circular>
-			<swiper-item>
-				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
-			</swiper-item>
-			<swiper-item>
-				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
-			</swiper-item>
-			<swiper-item>
-				<image src="../../static/images/carts/emptyCart.gif" mode=""></image>
-			</swiper-item>
-		</swiper>
+		<Slideshow></Slideshow>
 	</view>
 
 	
 </template>
 
 <script>
+	// 引入发送请求
 	import ajax from "../../util/ajax.js"
+	// 引入轮播图组件
+	import Slideshow from "../../components/Slideshow/Slideshow.vue"
 	export default {
 		data() {
 			return {
@@ -45,6 +38,9 @@
 		},
 		methods: {
 			
+		},
+		components:{
+			Slideshow
 		},
 		async mounted() {
 			this.indexData = await ajax("/index")

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "wangkaiZone",
-  "usingComponents": {}
+  "usingComponents": {
+    "slideshow": "/components/Slideshow/Slideshow"
+  }
 }
