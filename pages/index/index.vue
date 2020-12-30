@@ -47,7 +47,7 @@
 			
 		},
 		async mounted() {
-			this.indexData = await ajax("http://wangkai.zone:3579/index")
+			this.indexData = await ajax("/index")
 		}
 	}
 </script>

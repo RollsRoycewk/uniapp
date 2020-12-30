@@ -8400,7 +8400,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "wangkaiZone", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#DEB887", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "wangkaiZone" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#DEB887", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -9320,11 +9320,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */
+/* 24 */
 /*!************************************************!*\
   !*** D:/小程序练习/uniapp/wangkaiShop/util/ajax.js ***!
   \************************************************/
@@ -9332,10 +9328,21 @@ if (hadRuntime) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = _default;function _default(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "GET";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = _default;
+var _config = _interopRequireDefault(__webpack_require__(/*! ./config.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var equipment = uni.getSystemInfoSync().platform;
+var baseUrl;
+
+if (equipment === "devtools") {
+  baseUrl = _config.default.mpHost;
+} else {
+  baseUrl = _config.default.h5Host;
+}
+function _default(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "GET";
   return new Promise(function (resolve, reject) {
     uni.request({
-      url: url,
+      url: baseUrl + url,
       data: data,
       method: method,
       success: function success(val) {
@@ -9345,6 +9352,19 @@ if (hadRuntime) {
   });
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 25 */
+/*!**************************************************!*\
+  !*** D:/小程序练习/uniapp/wangkaiShop/util/config.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  mpHost: "http://wangkai.zone:3579",
+  h5Host: "/api" };exports.default = _default;
 
 /***/ })
 ]]);
