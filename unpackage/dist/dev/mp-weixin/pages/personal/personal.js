@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
- //
+/* WEBPACK VAR INJECTION */(function(uni) { //
 //
 //
 //
@@ -219,7 +219,14 @@ module.exports = {
   mounted: function mounted() {
 
   },
-  methods: {} };
+  methods: {
+    toLogin: function toLogin(event) {
+      uni.reLaunch({
+        // url:"/pages/login/login",
+        url: "/pages/login/login" });
+
+    } } };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

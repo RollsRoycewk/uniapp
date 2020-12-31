@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div class="header">
+		<div class="header" @click="toLogin">
 			<image class="userImg" src="../../static/images/personal/personal.png" mode=""></image>
-			<div class='userInfo'>
+			<div class='userInfo'  >
 				<p>未登录</p>
 				<p>点击登录账号</p>
 			</div>
@@ -96,7 +96,12 @@
 			
 		},
 		methods: {
-			
+			toLogin(event){
+				uni.reLaunch({
+					// url:"/pages/login/login",
+					url:"/pages/login/login"
+				})
+			}
 		}
 		
 	}
