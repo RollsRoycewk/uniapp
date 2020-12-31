@@ -27,14 +27,20 @@
 
 <script>
 	// 引入发送请求
-	import ajax from "../../util/ajax.js"
+	// import ajax from "../../util/ajax.js"
 	// 引入轮播图组件
 	import Slideshow from "../../components/Slideshow/Slideshow.vue"
+	import {mapState} from "vuex"
 	export default {
 		data() {
 			return {
-				indexData:{}
+				// indexData:{}
 			}
+		},
+		computed:{
+			...mapState({
+				indexData:state=>state.home.indexData
+			})
 		},
 		methods: {
 			
@@ -43,7 +49,9 @@
 			Slideshow
 		},
 		async mounted() {
-			this.indexData = await ajax("/index")
+			// console.log(this.$store.state.home.msg)
+			// this.indexData = await ajax("/index")
+			this.$store.dispatch("getIndexData")
 		}
 	}
 </script>
