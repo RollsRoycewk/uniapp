@@ -97,6 +97,13 @@
 		mounted(){
 			if(this.$mp.query.userInfo){
 				this.userInfo = JSON.parse(this.$mp.query.userInfo)
+			}else{
+				uni.getUserInfo({
+					// 注意这里要用箭头函数
+					success:(data)=>{	
+							this.userInfo = data.userInfo
+					}
+				})
 			}
 			
 		},

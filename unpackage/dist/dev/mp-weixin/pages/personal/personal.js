@@ -218,9 +218,16 @@ module.exports = {
       userInfo: {} };
 
   },
-  mounted: function mounted() {
+  mounted: function mounted() {var _this = this;
     if (this.$mp.query.userInfo) {
       this.userInfo = JSON.parse(this.$mp.query.userInfo);
+    } else {
+      uni.getUserInfo({
+        // 注意这里要用箭头函数
+        success: function success(data) {
+          _this.userInfo = data.userInfo;
+        } });
+
     }
 
   },
