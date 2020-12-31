@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div class="header" @click="toLogin">
-			<image class="userImg" src="../../static/images/personal/personal.png" mode=""></image>
-			<div class='userInfo'  >
-				<p>未登录</p>
-				<p>点击登录账号</p>
+			<image class="userImg" :src="userInfo.avatarUrl?userInfo.avatarUrl:'../../static/images/personal/personal.png'"></image>
+			<div class='userInfo'>
+				<p>{{userInfo.nickName?userInfo.nickName:'未登录'}}</p>
+				<p>{{userInfo.nickName?'微信用户':'点击登录账号'}}</p>
 			</div>
 		</div>
 		
@@ -89,10 +89,15 @@
 						name: '退还/售后',
 						icon: 'icon-shouhou'
 					}
-				]
+				],
+				// 用户登录数据
+				userInfo:{}
 			}
 		},
 		mounted(){
+			if(this.$mp.query.userInfo){
+				this.userInfo = JSON.parse(this.$mp.query.userInfo)
+			}
 			
 		},
 		methods: {

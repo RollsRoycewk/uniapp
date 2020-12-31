@@ -211,12 +211,17 @@ module.exports = {
 
       {
         name: '退还/售后',
-        icon: 'icon-shouhou' }] };
+        icon: 'icon-shouhou' }],
 
 
+      // 用户登录数据
+      userInfo: {} };
 
   },
   mounted: function mounted() {
+    if (this.$mp.query.userInfo) {
+      this.userInfo = JSON.parse(this.$mp.query.userInfo);
+    }
 
   },
   methods: {

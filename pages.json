@@ -12,6 +12,7 @@
 				"navigationBarTitleText": "wangkaiZone"
 			}
 		},
+
 		{
 			"path": "pages/login/login",
 			"style": {
