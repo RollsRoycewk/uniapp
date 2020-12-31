@@ -5,6 +5,24 @@
 			"style": {
 				"navigationBarTitleText": "wangkaiZone"
 			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/personal/personal",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
 		}
     ],
 	"globalStyle": {
@@ -20,6 +38,34 @@
 				"name": "", //模式名称
 				"path": "", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	},
+	"tabBar":{
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"static/images/tabBar/tab-home.png",
+				"selectedIconPath":"static/images/tabBar/tab-home-current.png",
+				"text":"首页"
+			},
+			{
+				"pagePath":"pages/category/category",
+				"iconPath":"static/images/tabBar/tab-cate.png",
+				"selectedIconPath":"static/images/tabBar/tab-cate-current.png",
+				"text":"分类"
+			},
+			{
+				"pagePath":"pages/cart/cart",
+				"iconPath":"static/images/tabBar/tab-cart.png",
+				"selectedIconPath":"static/images/tabBar/tab-cart-current.png",
+				"text":"购物车"
+			},
+			{
+				"pagePath":"pages/personal/personal",
+				"iconPath":"static/images/tabBar/tab-my.png",
+				"selectedIconPath":"static/images/tabBar/tab-my-current.png",
+				"text":"个人中心"
 			}
 		]
 	}
