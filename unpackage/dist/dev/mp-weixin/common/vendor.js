@@ -1707,8 +1707,7 @@ var mutations = {
     }
   },
   editSelected: function editSelected(state, _ref2) {var selected = _ref2.selected,index = _ref2.index;
-    console.log("editSelected", selected, index);
-
+    // console.log("editSelected",selected,index)
     state.mockData[index].selected = selected;
   } };
 
@@ -1717,8 +1716,11 @@ var actions = {};
 
 
 
-var getters = {};var _default =
-
+var getters = {
+  isSelectedNum: function isSelectedNum() {
+    var result = state.mockData.every(function (item) {return item.selected === true;});
+    return result;
+  } };var _default =
 
 
 {

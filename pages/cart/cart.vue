@@ -39,7 +39,7 @@
 			</view>
 			<!-- 底部下单 -->
 			<view class="cartFooter">
-				<text class='iconfont icon-xuanzhong selected'></text>
+				<text class='iconfont icon-xuanzhong' :class="isSelectedNum ?'selected' : '' "></text>
 				<text class="allSelected">已选 3</text>
 				<view class="right">
 					<text class="totalPrice">合计: ￥1000</text>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-	import {mapState} from "vuex"
+	import {mapState,mapGetters} from "vuex"
 	export default {
 		data() {
 			return {
@@ -72,7 +72,8 @@
 		computed:{
 			...mapState({
 				mockData:state=>state.mockCartData.mockData
-			})
+			}),
+			...mapGetters(["isSelectedNum"])
 		},
 		mounted(){
 			

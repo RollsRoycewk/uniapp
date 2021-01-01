@@ -195,8 +195,9 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
 
   computed: _objectSpread({},
   (0, _vuex.mapState)({
-    mockData: function mockData(state) {return state.mockCartData.mockData;} })),
+    mockData: function mockData(state) {return state.mockCartData.mockData;} }),
 
+  (0, _vuex.mapGetters)(["isSelectedNum"])),
 
   mounted: function mounted() {var _this = this;
 

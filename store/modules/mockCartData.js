@@ -200,8 +200,7 @@ const mutations = {
 		}
 	},
 	editSelected(state,{selected,index}){
-		console.log("editSelected",selected,index)
-		
+		// console.log("editSelected",selected,index)
 		state.mockData[index].selected = selected
 	}
 }
@@ -211,7 +210,10 @@ const actions = {
 }
 
 const getters = {
-	
+	isSelectedNum(){
+		let result = state.mockData.every((item)=>item.selected === true)
+		return result
+	}
 }
 
 export default {
