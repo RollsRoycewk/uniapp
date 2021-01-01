@@ -137,7 +137,7 @@ var _ajax = _interopRequireDefault(__webpack_require__(/*! ../../util/ajax.js */
                 title: '正在加载中' });_context.next = 3;return (
 
                 (0, _ajax.default)('/getindexCateList'));case 3:result = _context.sent;
-              this.cateList = result.data;
+              this.cateList = result;
               // console.log(this.cateList)
               wx.hideLoading();case 6:case "end":return _context.stop();}}}, _callee, this);}));function mounted() {return _mounted.apply(this, arguments);}return mounted;}(),
 

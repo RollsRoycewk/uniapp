@@ -21,8 +21,8 @@
 		<!-- 轮播图 -->
 		<!-- 局部滚动功能 -->
 		<scroll-view scroll-y="true" class="contentScroll">
-			<Recommend></Recommend>
-			<!-- <CateList></CateList> -->
+			<Recommend v-if="currentIndex === -1"></Recommend>
+			<CateList v-else :navIndex="currentIndex"></CateList>
 		</scroll-view>
 		
 	</view>

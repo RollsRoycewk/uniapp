@@ -30,7 +30,7 @@
 				title: '正在加载中'
 			})
 			let result= await ajax('/getindexCateList')
-			this.cateList=result.data;
+			this.cateList=result;
 			// console.log(this.cateList)
 			wx.hideLoading();
 		},
