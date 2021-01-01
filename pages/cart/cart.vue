@@ -20,7 +20,7 @@
 		<block v-else>
 			<view class="cartList">
 				<view class="cartItem" v-for="(item,index) in mockData" :key="item.id">
-					<text class='iconfont icon-xuanzhong selected'></text>
+					<text class='iconfont icon-xuanzhong' :class="item.selected ? 'selected' : ''" @click="changeSelected(!item.selected,index)"></text>
 					<view class="shopItem">
 						<image class="shopImg" :src="item.listPicUrl" mode=""></image>
 						<view class="shopInfo">
@@ -64,6 +64,9 @@
 		methods:{
 			handleCout(flag,index){
 				this.$store.commit("reviseNum",{flag,index})
+			},
+			changeSelected(selected,index){
+				this.$store.commit("editSelected",{selected,index})
 			}
 		},
 		computed:{

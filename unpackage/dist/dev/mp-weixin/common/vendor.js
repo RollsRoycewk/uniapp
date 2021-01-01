@@ -1509,6 +1509,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var state = {
   mockData: [
   { "count": 1,
+    "selected": false,
     "promId": 0,
     "showPoints": false,
     "itemTagList": [
@@ -1585,6 +1586,7 @@ var state = {
 
   {
     "count": 1,
+    "selected": true,
     "promId": 0,
     "showPoints": false,
     "itemTagList": [
@@ -1703,6 +1705,11 @@ var mutations = {
 
       state.mockData.push(goodsData1);
     }
+  },
+  editSelected: function editSelected(state, _ref2) {var selected = _ref2.selected,index = _ref2.index;
+    console.log("editSelected", selected, index);
+
+    state.mockData[index].selected = selected;
   } };
 
 

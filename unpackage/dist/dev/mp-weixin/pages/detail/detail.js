@@ -169,9 +169,9 @@ var _ajax = _interopRequireDefault(__webpack_require__(/*! ../../util/ajax.js */
   },
   mounted: function () {var _mounted = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var goodId, result;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
               goodId = this.$mp.query.goodId;
-              console.log(goodId);_context.next = 4;return (
-                (0, _ajax.default)("/getgooddetail", { goodId: goodId }));case 4:result = _context.sent;
-              this.goodsData = result;case 6:case "end":return _context.stop();}}}, _callee, this);}));function mounted() {return _mounted.apply(this, arguments);}return mounted;}(),
+              // console.log(goodId)
+              _context.next = 3;return (0, _ajax.default)("/getgooddetail", { goodId: goodId });case 3:result = _context.sent;
+              this.goodsData = result;case 5:case "end":return _context.stop();}}}, _callee, this);}));function mounted() {return _mounted.apply(this, arguments);}return mounted;}(),
 
   methods: {
     addCart: function addCart() {

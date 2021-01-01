@@ -2,6 +2,7 @@
 const state = {
 	mockData : [
     {	"count":1,
+		"selected":false,
         "promId": 0,
         "showPoints": false,
         "itemTagList": [
@@ -78,6 +79,7 @@ const state = {
     },
     {
 		"count":1,
+		"selected":true,
         "promId": 0,
         "showPoints": false,
         "itemTagList": [
@@ -196,6 +198,11 @@ const mutations = {
 			})
 			state.mockData.push(goodsData1)
 		}
+	},
+	editSelected(state,{selected,index}){
+		console.log("editSelected",selected,index)
+		
+		state.mockData[index].selected = selected
 	}
 }
 

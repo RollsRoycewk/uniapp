@@ -45,7 +45,7 @@
 		},
 		async mounted() {
 			let {goodId} = this.$mp.query
-			console.log(goodId)
+			// console.log(goodId)
 			let result = await ajax("/getgooddetail",{goodId})
 			this.goodsData = result
 		},

@@ -188,6 +188,9 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
   methods: {
     handleCout: function handleCout(flag, index) {
       this.$store.commit("reviseNum", { flag: flag, index: index });
+    },
+    changeSelected: function changeSelected(selected, index) {
+      this.$store.commit("editSelected", { selected: selected, index: index });
     } },
 
   computed: _objectSpread({},
