@@ -1722,7 +1722,11 @@ var actions = {};
 
 
 var getters = {
+
   isSelectedNum: function isSelectedNum() {
+    if (!state.mockData.length) {
+      return false;
+    }
     var result = state.mockData.every(function (item) {return item.selected === true;});
     return result;
   } };var _default =

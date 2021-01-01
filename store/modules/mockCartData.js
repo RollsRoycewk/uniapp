@@ -215,7 +215,11 @@ const actions = {
 }
 
 const getters = {
+
 	isSelectedNum(){
+		if(!state.mockData.length){
+			return false
+		}
 		let result = state.mockData.every((item)=>item.selected === true)
 		return result
 	}
