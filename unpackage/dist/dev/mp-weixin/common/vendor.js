@@ -1709,6 +1709,11 @@ var mutations = {
   editSelected: function editSelected(state, _ref2) {var selected = _ref2.selected,index = _ref2.index;
     // console.log("editSelected",selected,index)
     state.mockData[index].selected = selected;
+  },
+  allSelected: function allSelected(state, selected) {
+    state.mockData.forEach(function (item) {
+      item.selected = selected;
+    });
   } };
 
 

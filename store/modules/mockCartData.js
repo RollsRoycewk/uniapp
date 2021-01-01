@@ -202,6 +202,11 @@ const mutations = {
 	editSelected(state,{selected,index}){
 		// console.log("editSelected",selected,index)
 		state.mockData[index].selected = selected
+	},
+	allSelected(state,selected){
+		state.mockData.forEach((item)=>{
+			item.selected = selected
+		})
 	}
 }
 

@@ -39,7 +39,7 @@
 			</view>
 			<!-- 底部下单 -->
 			<view class="cartFooter">
-				<text class='iconfont icon-xuanzhong' :class="isSelectedNum ?'selected' : '' "></text>
+				<text class='iconfont icon-xuanzhong' :class="isSelectedNum ?'selected' : '' " @click="allSelected(!isSelectedNum)"></text>
 				<text class="allSelected">已选 3</text>
 				<view class="right">
 					<text class="totalPrice">合计: ￥1000</text>
@@ -67,6 +67,9 @@
 			},
 			changeSelected(selected,index){
 				this.$store.commit("editSelected",{selected,index})
+			},
+			allSelected(selected){
+				this.$store.commit("allSelected",selected)
 			}
 		},
 		computed:{

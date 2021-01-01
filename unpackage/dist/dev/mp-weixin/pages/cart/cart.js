@@ -191,6 +191,9 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
     },
     changeSelected: function changeSelected(selected, index) {
       this.$store.commit("editSelected", { selected: selected, index: index });
+    },
+    allSelected: function allSelected(selected) {
+      this.$store.commit("allSelected", selected);
     } },
 
   computed: _objectSpread({},
