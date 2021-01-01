@@ -93,11 +93,22 @@
 </template>
 
 <script>
+	import {mapState} from "vuex"
 	export default {
 		data() {
 			return {
 				
 			};
+		},
+		computed:{
+			...mapState({
+				categoryData:state=>state.category.categoryData
+			})
+		},
+		mounted(){
+			this.$store.dispatch("getcategoryData")
+			console.log(this)
+			console.log(this.categoryData)
 		}
 	}
 </script>

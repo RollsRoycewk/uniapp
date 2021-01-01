@@ -116,6 +116,7 @@
 				left 0
 				bottom 2upx
 	.contentScroll
-		height calc(100vh - 80upx - 80upx)
+		// height calc(100vh - 80upx - 80upx)
+		height calc(100vh - 80upx - 80upx - var(--window-bottom) - var(--window-top))
 			
 </style>
