@@ -11,10 +11,10 @@
 		
 		<!-- 内容区 -->
 		<scroll-view class="content" scroll-y="true">
-			<image class="detailImg" src="https://yanxuan-item.nosdn.127.net/c2eeb1b872af1b8efc179a7515aacdaa.png" mode=""></image>
-			<view class="tag">暖冬特惠</view>
-			<text class="price">￥ 209</text>
-			<view class="info">男式色拉姆内衣套装2.0</view>
+			<image class="detailImg" :src="goodsData.listPicUrl" mode=""></image>
+			<view class="tag">{{goodsData.promotionDesc}}</view>
+			<text class="price">￥ {{goodsData.retailPrice}}</text>
+			<view class="info">{{goodsData.name}}</view>
 			
 			
 			<!-- 准备内容 -->
@@ -36,11 +36,18 @@
 </template>
 
 <script>
+	import ajax from "../../util/ajax.js"
 	export default {
 		data() {
 			return {
-				
+				goodsData:[]
 			}
+		},
+		async mounted() {
+			let {goodId} = this.$mp.query
+			console.log(goodId)
+			let result = await ajax("/getgooddetail",{goodId})
+			this.goodsData = result
 		}
 	}
 </script>
