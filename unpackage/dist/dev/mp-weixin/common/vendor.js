@@ -1497,6 +1497,205 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
+/***/ 111:
+/*!*****************************************************************!*\
+  !*** D:/小程序练习/uniapp/wangkaiShop/store/modules/mockCartData.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var state = {
+  mockData: [
+  { "count": 1,
+    "promId": 0,
+    "showPoints": false,
+    "itemTagList": [
+    {
+      "itemId": 1535004,
+      "tagId": 128111157,
+      "freshmanExclusive": false,
+      "name": "暖冬特惠",
+      "subType": 204,
+      "forbidJump": false,
+      "type": 2 }],
+
+
+    "rank": 1,
+    "id": 1535004,
+    "sellVolume": 4001,
+    "primaryPicUrl": "https://yanxuan-item.nosdn.127.net/f79906f1b1fe86420ea40473de66ec0e.png",
+    "soldOut": false,
+    "sortFlag": 0,
+    "commentCount": 0,
+    "onSaleTime": 1538101761748,
+    "picMode": 1,
+    "commentWithPicCount": 0,
+    "underShelf": false,
+    "status": 2,
+    "couponConflict": true,
+    "forbiddenBuy": false,
+    "promotionDesc": "暖冬特惠",
+    "limitedFlag": 204,
+    "pieceNum": 0,
+    "itemSizeTableDetailFlag": false,
+    "forbidExclusiveCal": false,
+    "rewardShareFlag": false,
+    "updateTime": 1575893634989,
+    "showCommentEntrance": true,
+    "pieceUnitDesc": "件",
+    "specialPromTag": "",
+    "counterPrice": 299,
+    "categoryL2Id": 0,
+    "retailPrice": 209,
+    "primarySkuPreSellPrice": 0,
+    "preLimitFlag": 0,
+    "itemPromValid": true,
+    "promTag": "暖冬特惠",
+    "source": 0,
+    "points": 0,
+    "primarySkuPreSellStatus": 0,
+    "extraServiceFlag": 0,
+    "flashPageLink": "",
+    "autoOnsaleTimeLeft": 0,
+    "innerData": {},
+    "saleCenterSkuId": 0,
+    "pointsStatus": 0,
+    "extraPrice": "",
+    "colorNum": 0,
+    "showTime": 0,
+    "autoOnsaleTime": 0,
+    "preemptionStatus": 1,
+    "isPreemption": 0,
+    "zcSearchFlag": false,
+    "name": "男式色拉姆内衣套装2.0",
+    "appExclusiveFlag": false,
+    "itemType": 1,
+    "listPicUrl": "https://yanxuan-item.nosdn.127.net/c2eeb1b872af1b8efc179a7515aacdaa.png",
+    "pointsPrice": 0,
+    "simpleDesc": "色拉姆发热面料，加厚升级",
+    "seoTitle": "",
+    "newItemFlag": false,
+    "buttonType": 0,
+    "primarySkuId": 1636062,
+    "displaySkuId": 1636056,
+    "productPlace": "",
+    "itemSizeTableFlag": false },
+
+  {
+    "count": 1,
+    "promId": 0,
+    "showPoints": false,
+    "itemTagList": [
+    {
+      "itemId": 1536001,
+      "tagId": 128111157,
+      "freshmanExclusive": false,
+      "name": "暖冬特惠",
+      "subType": 204,
+      "forbidJump": false,
+      "type": 2 }],
+
+
+    "rank": 1,
+    "id": 1536001,
+    "sellVolume": 3634,
+    "primaryPicUrl": "https://yanxuan-item.nosdn.127.net/32b8b2d07b1c4327593a4a70993eeac2.png",
+    "soldOut": false,
+    "sortFlag": 0,
+    "commentCount": 0,
+    "onSaleTime": 1538101896296,
+    "picMode": 1,
+    "commentWithPicCount": 0,
+    "underShelf": false,
+    "status": 2,
+    "couponConflict": true,
+    "forbiddenBuy": false,
+    "promotionDesc": "暖冬特惠",
+    "limitedFlag": 204,
+    "pieceNum": 0,
+    "itemSizeTableDetailFlag": false,
+    "forbidExclusiveCal": false,
+    "rewardShareFlag": false,
+    "updateTime": 1575894115275,
+    "showCommentEntrance": true,
+    "pieceUnitDesc": "件",
+    "specialPromTag": "",
+    "counterPrice": 299,
+    "categoryL2Id": 0,
+    "retailPrice": 209,
+    "primarySkuPreSellPrice": 0,
+    "preLimitFlag": 0,
+    "itemPromValid": true,
+    "promTag": "暖冬特惠",
+    "source": 0,
+    "points": 0,
+    "primarySkuPreSellStatus": 0,
+    "extraServiceFlag": 0,
+    "flashPageLink": "",
+    "autoOnsaleTimeLeft": 0,
+    "innerData": {},
+    "saleCenterSkuId": 0,
+    "pointsStatus": 0,
+    "extraPrice": "",
+    "colorNum": 0,
+    "showTime": 0,
+    "autoOnsaleTime": 0,
+    "preemptionStatus": 1,
+    "isPreemption": 0,
+    "zcSearchFlag": false,
+    "name": "女式色拉姆内衣套装2.0",
+    "appExclusiveFlag": false,
+    "itemType": 1,
+    "listPicUrl": "https://yanxuan-item.nosdn.127.net/02b61fb5700aed6761b7524d98ed0837.png",
+    "pointsPrice": 0,
+    "simpleDesc": "色拉姆发热面料，加厚升级",
+    "seoTitle": "",
+    "newItemFlag": false,
+    "buttonType": 0,
+    "primarySkuId": 1634105,
+    "displaySkuId": 1634104,
+    "productPlace": "",
+    "itemSizeTableFlag": false }] };
+
+
+
+
+var mutations = {
+  reviseNum: function reviseNum(state, _ref) {var flag = _ref.flag,index = _ref.index;
+    console.log("123", flag, index);
+    var shopItem = state.mockData[index];
+    if (flag) {
+      shopItem.count++;
+    } else {
+
+      if (shopItem.count === 1) {
+        // 如果为1再减就是0,清除掉这个数据即可
+        // state.mockData[index] = undefined
+        state.mockData.splice(index, 1);
+      } else {
+        shopItem.count--;
+      }
+    }
+  } };
+
+
+var actions = {};
+
+
+
+var getters = {};var _default =
+
+
+
+{
+  state: state,
+  mutations: mutations,
+  actions: actions,
+  getters: getters };exports.default = _default;
+
+/***/ }),
+
 /***/ 14:
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -1615,14 +1814,16 @@ function normalizeComponent (
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 16));
 var _home = _interopRequireDefault(__webpack_require__(/*! ./modules/home.js */ 17));
-var _category = _interopRequireDefault(__webpack_require__(/*! ./modules/category.js */ 85));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _category = _interopRequireDefault(__webpack_require__(/*! ./modules/category.js */ 23));
+var _mockCartData = _interopRequireDefault(__webpack_require__(/*! ./modules/mockCartData.js */ 111));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 _vue.default.use(_vuex.default);var _default =
 
 new _vuex.default.Store({
   modules: {
     home: _home.default,
-    category: _category.default } });exports.default = _default;
+    category: _category.default,
+    mockCartData: _mockCartData.default } });exports.default = _default;
 
 /***/ }),
 
@@ -9416,6 +9617,41 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
+/***/ 23:
+/*!*************************************************************!*\
+  !*** D:/小程序练习/uniapp/wangkaiShop/store/modules/category.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));var _ajax = _interopRequireDefault(__webpack_require__(/*! ../../util/ajax.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+
+var state = {
+  categoryData: [] };
+
+
+var mutations = {
+  GETCATEGORYDATA: function GETCATEGORYDATA(state, categoryData) {
+    state.categoryData = categoryData;
+  } };
+
+var actions = {
+  getcategoryData: function () {var _getcategoryData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {var commit, categoryData;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref.commit;_context.next = 3;return (
+                (0, _ajax.default)("/categorydatas"));case 3:categoryData = _context.sent;
+              commit("GETCATEGORYDATA", categoryData);case 5:case "end":return _context.stop();}}}, _callee, this);}));function getcategoryData(_x) {return _getcategoryData.apply(this, arguments);}return getcategoryData;}() };
+
+
+var getters = {};var _default =
+
+{
+  state: state,
+  actions: actions,
+  mutations: mutations,
+  getters: getters };exports.default = _default;
+
+/***/ }),
+
 /***/ 3:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -10362,7 +10598,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "wangkaiZone", "usingComponents": { "recommend": "/components/recommend/recommend", "cate-list": "/components/cateList/cateList" } }, "pages/personal/personal": { "navigationBarTitleText": "个人中心", "usingComponents": {} }, "pages/login/login": { "navigationBarTitleText": "注册", "usingComponents": {} }, "pages/category/category": { "navigationBarTitleText": "分类", "usingComponents": {} }, "pages/cart/cart": { "navigationBarTitleText": "购物车", "usingComponents": {} }, "pages/detail/detail": { "navigationBarTitleText": "商品详情", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#DEB887", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/cart/cart": { "navigationBarTitleText": "购物车", "usingComponents": {} }, "pages/index/index": { "navigationBarTitleText": "wangkaiZone", "usingComponents": { "recommend": "/components/recommend/recommend", "cate-list": "/components/cateList/cateList" } }, "pages/detail/detail": { "navigationBarTitleText": "商品详情", "usingComponents": {} }, "pages/personal/personal": { "navigationBarTitleText": "个人中心", "usingComponents": {} }, "pages/login/login": { "navigationBarTitleText": "注册", "usingComponents": {} }, "pages/category/category": { "navigationBarTitleText": "分类", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#DEB887", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 
@@ -10375,41 +10611,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__wangkaizone" };exports.default = _default;
-
-/***/ }),
-
-/***/ 85:
-/*!*************************************************************!*\
-  !*** D:/小程序练习/uniapp/wangkaiShop/store/modules/category.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));var _ajax = _interopRequireDefault(__webpack_require__(/*! ../../util/ajax.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
-
-var state = {
-  categoryData: [] };
-
-
-var mutations = {
-  GETCATEGORYDATA: function GETCATEGORYDATA(state, categoryData) {
-    state.categoryData = categoryData;
-  } };
-
-var actions = {
-  getcategoryData: function () {var _getcategoryData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {var commit, categoryData;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref.commit;_context.next = 3;return (
-                (0, _ajax.default)("/categorydatas"));case 3:categoryData = _context.sent;
-              commit("GETCATEGORYDATA", categoryData);case 5:case "end":return _context.stop();}}}, _callee, this);}));function getcategoryData(_x) {return _getcategoryData.apply(this, arguments);}return getcategoryData;}() };
-
-
-var getters = {};var _default =
-
-{
-  state: state,
-  actions: actions,
-  mutations: mutations,
-  getters: getters };exports.default = _default;
 
 /***/ })
 

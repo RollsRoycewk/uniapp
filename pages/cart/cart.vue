@@ -1,58 +1,83 @@
 <template>
 	<view class="cartContainer">
 		<view class="title">购物车</view>
-		
 		<!-- 未登录时候的购物车 -->
-		<view class="header">
-			<text>30天无忧退货</text>
-			<text>48小时快速退货</text>
-			<text>满99元免邮费</text>
-		</view>
-		<view class="contentContainer">
-			<image class="cartImg" src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-d6193bd6e4.png?imageView&type=webp" mode=""></image>
-			<button>登录</button>
-			<view class="addMore">去添加点什么吧</view>
-		</view>
+		<block v-if="!userInfo.nickName">
+			<view class="header">
+				<text>30天无忧退货</text>
+				<text>48小时快速退货</text>
+				<text>满99元免邮费</text>
+			</view>
+			<view class="contentContainer">
+				<image class="cartImg" src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-d6193bd6e4.png?imageView&type=webp" mode=""></image>
+				<button>登录</button>
+				<view class="addMore">去添加点什么吧</view>
+			</view>
+		</block>
+		
 		
 		<!-- 登陆之后的购物车 -->
-<!-- 		<view class="cartList">
-			<view class="cartItem">
-				<text class='iconfont icon-xuanzhong selected'></text>
-				<view class="shopItem">
-					<image class="shopImg" src="https://yanxuan-item.nosdn.127.net/8ca5893efee1a4e33c915d6b6b44c107.png" mode=""></image>
-					<view class="shopInfo">
-						<text>女式户外派克羽绒服</text>
-						<text class="price">￥1039</text>
+		<block v-else>
+			<view class="cartList">
+				<view class="cartItem" v-for="(item,index) in mockData" :key="item.id">
+					<text class='iconfont icon-xuanzhong selected'></text>
+					<view class="shopItem">
+						<image class="shopImg" :src="item.listPicUrl" mode=""></image>
+						<view class="shopInfo">
+							<text>{{item.name}}</text>
+							<text class="price">￥{{item.retailPrice}}</text>
+						</view>
+					</view> -->
+					<!-- 控制数量 -->
+					<view class="countCtrl">
+						<text class="add" @click="handleCout(true,index)"> + </text>
+						<text class="count"> {{item.count}} </text>
+						<text class="del"  @click="handleCout(false,index)"> - </text>
 					</view>
-				</view> -->
-				<!-- 控制数量 -->
-<!-- 				<view class="countCtrl">
-					<text class="add"> + </text>
-					<text class="count"> 2 </text>
-					<text class="del"> - </text>
+				</view>
+				
+			</view>
+			<!-- 底部下单 -->
+			<view class="cartFooter">
+				<text class='iconfont icon-xuanzhong selected'></text>
+				<text class="allSelected">已选 3</text>
+				<view class="right">
+					<text class="totalPrice">合计: ￥1000</text>
+					<text class="preOrder">下单</text>
 				</view>
 			</view>
-			
-		</view> -->
-		<!-- 底部下单 -->
-<!-- 		<view class="cartFooter">
-			<text class='iconfont icon-xuanzhong selected'></text>
-			<text class="allSelected">已选 3</text>
-			<view class="right">
-				<text class="totalPrice">合计: ￥1000</text>
-				<text class="preOrder">下单</text>
-			</view>
-		</view> -->
+		</block>
+	
 	
 	</view>
 </template>
 
 <script>
+	import {mapState} from "vuex"
 	export default {
 		data() {
 			return {
-				
+				userInfo:{},
+				// mockData:[]
 			};
+		},
+		methods:{
+			handleCout(flag,index){
+				this.$store.commit("reviseNum",{flag,index})
+			}
+		},
+		computed:{
+			...mapState({
+				mockData:state=>state.mockCartData.mockData
+			})
+		},
+		mounted(){
+			
+			uni.getUserInfo({
+				success: (res) => {
+					this.userInfo = res.userInfo
+				}
+			})
 		}
 	}
 </script>
