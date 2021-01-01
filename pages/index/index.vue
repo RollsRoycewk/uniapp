@@ -19,7 +19,11 @@
 			</view>
 		</scroll-view>
 		<!-- 轮播图 -->
-		<Recommend></Recommend>
+		<!-- 局部滚动功能 -->
+		<scroll-view scroll-y="true" class="contentScroll">
+			<Recommend></Recommend>
+		</scroll-view>
+		
 	</view>
 
 	
@@ -111,5 +115,7 @@
 				position absolute
 				left 0
 				bottom 2upx
+	.contentScroll
+		height calc(100vh - 80upx - 80upx)
 			
 </style>

@@ -73,4 +73,7 @@
   left: 0;
   bottom: 2rpx;
 }
+.contentScroll {
+  height: calc(100vh - 80rpx - 80rpx);
+}
 
