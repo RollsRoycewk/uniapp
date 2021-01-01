@@ -231,8 +231,6 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
 
   mounted: function mounted() {
     this.$store.dispatch("getcategoryData");
-    console.log(this);
-    console.log(this.categoryData);
   } };exports.default = _default;
 
 /***/ }),

@@ -158,23 +158,29 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Recommend = function Recommend() {return __webpack_require__.e(/*! import() | components/recommend/recommend */ "components/recommend/recommend").then(__webpack_require__.bind(null, /*! ../../components/recommend/recommend.vue */ 63));};var _default =
+
+
+var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Recommend = function Recommend() {return __webpack_require__.e(/*! import() | components/recommend/recommend */ "components/recommend/recommend").then(__webpack_require__.bind(null, /*! ../../components/recommend/recommend.vue */ 63));};var CateList = function CateList() {return Promise.all(/*! import() | components/cateList/cateList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/cateList/cateList")]).then(__webpack_require__.bind(null, /*! ../../components/cateList/cateList.vue */ 86));};var _default =
 {
   data: function data() {
     return {
-      // indexData:{}
-    };
+      currentIndex: -1 };
+
   },
   computed: _objectSpread({},
   (0, _vuex.mapState)({
     indexData: function indexData(state) {return state.home.indexData;} })),
 
 
-  methods: {},
-
+  methods: {
+    // 处理选择高亮
+    handleClick: function handleClick(num) {
+      this.currentIndex = num;
+    } },
 
   components: {
-    Recommend: Recommend },
+    Recommend: Recommend,
+    CateList: CateList },
 
   mounted: function () {var _mounted = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
               // console.log(this.$store.state.home.msg)

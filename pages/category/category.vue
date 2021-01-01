@@ -107,8 +107,6 @@
 		},
 		mounted(){
 			this.$store.dispatch("getcategoryData")
-			console.log(this)
-			console.log(this.categoryData)
 		}
 	}
 </script>

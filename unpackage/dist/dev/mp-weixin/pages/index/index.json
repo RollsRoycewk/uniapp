@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "wangkaiZone",
   "usingComponents": {
-    "recommend": "/components/recommend/recommend"
+    "recommend": "/components/recommend/recommend",
+    "cate-list": "/components/cateList/cateList"
   }
 }

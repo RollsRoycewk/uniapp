@@ -11,10 +11,10 @@
 		</view>
 		<!-- navContainer -->
 		<scroll-view class="nav-container" scroll-x="" v-if="indexData.kingKongModule">
-			<view class="nav-item active" >
+			<view class="nav-item " :class="currentIndex === -1 ? 'active' : ''"  @click="handleClick(-1)">
 				推荐
 			</view>
-			<view class="nav-item" v-for="item in indexData.kingKongModule.kingKongList" :key="item.L1Id">
+			<view class="nav-item" :class="currentIndex === index ? 'active' : ''" v-for="(item,index) in indexData.kingKongModule.kingKongList" :key="item.L1Id" @click="handleClick(index)">
 				{{item.text}}
 			</view>
 		</scroll-view>
@@ -22,6 +22,7 @@
 		<!-- 局部滚动功能 -->
 		<scroll-view scroll-y="true" class="contentScroll">
 			<Recommend></Recommend>
+			<!-- <CateList></CateList> -->
 		</scroll-view>
 		
 	</view>
@@ -34,11 +35,12 @@
 	// import ajax from "../../util/ajax.js"
 	// 引入轮播图组件
 	import Recommend from "../../components/recommend/recommend.vue"
+	import CateList from "../../components/cateList/cateList.vue"
 	import {mapState} from "vuex"
 	export default {
 		data() {
 			return {
-				// indexData:{}
+				currentIndex:-1
 			}
 		},
 		computed:{
@@ -47,10 +49,14 @@
 			})
 		},
 		methods: {
-			
+			// 处理选择高亮
+			handleClick(num){
+				this.currentIndex = num
+			}
 		},
 		components:{
-			Recommend
+			Recommend,
+			CateList
 		},
 		async mounted() {
 			// console.log(this.$store.state.home.msg)
