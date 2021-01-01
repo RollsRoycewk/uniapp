@@ -1,3 +1,4 @@
+	import Vue from "vue"
 const state = {
 	mockData : [
     {	"count":1,
@@ -169,6 +170,31 @@ const mutations = {
 			}else{
 				shopItem.count --
 			}
+		}
+	},
+		// 增加商品
+	addShopCart(state,goodsData){
+		// console.log("123",goodsData)
+		// 推送之前count加一
+		let carList = state.mockData
+		
+		let shopItem = carList.find((item)=>{
+			return item.id === goodsData.id
+		})
+		
+		if(shopItem){
+			shopItem.count++
+		}else{
+			// goodsData.count = 1  错误
+			// 注意要引入vue,方法一
+			// Vue.set(goodsData,"count",1)
+			
+			// 方法二
+			const goodsData1 = Vue.observable({
+				...goodsData,
+				count:1
+			})
+			state.mockData.push(goodsData1)
 		}
 	}
 }

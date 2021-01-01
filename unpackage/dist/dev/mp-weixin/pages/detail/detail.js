@@ -171,7 +171,12 @@ var _ajax = _interopRequireDefault(__webpack_require__(/*! ../../util/ajax.js */
               goodId = this.$mp.query.goodId;
               console.log(goodId);_context.next = 4;return (
                 (0, _ajax.default)("/getgooddetail", { goodId: goodId }));case 4:result = _context.sent;
-              this.goodsData = result;case 6:case "end":return _context.stop();}}}, _callee, this);}));function mounted() {return _mounted.apply(this, arguments);}return mounted;}() };exports.default = _default;
+              this.goodsData = result;case 6:case "end":return _context.stop();}}}, _callee, this);}));function mounted() {return _mounted.apply(this, arguments);}return mounted;}(),
+
+  methods: {
+    addCart: function addCart() {
+      this.$store.commit("addShopCart", this.goodsData);
+    } } };exports.default = _default;
 
 /***/ }),
 

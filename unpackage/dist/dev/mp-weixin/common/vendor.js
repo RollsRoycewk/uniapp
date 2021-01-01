@@ -1505,7 +1505,8 @@ uni$1;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var state = {
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+var state = {
   mockData: [
   { "count": 1,
     "promId": 0,
@@ -1676,6 +1677,31 @@ var mutations = {
       } else {
         shopItem.count--;
       }
+    }
+  },
+  // 增加商品
+  addShopCart: function addShopCart(state, goodsData) {
+    // console.log("123",goodsData)
+    // 推送之前count加一
+    var carList = state.mockData;
+
+    var shopItem = carList.find(function (item) {
+      return item.id === goodsData.id;
+    });
+
+    if (shopItem) {
+      shopItem.count++;
+    } else {
+      // goodsData.count = 1  错误
+      // 注意要引入vue,方法一
+      // Vue.set(goodsData,"count",1)
+
+      // 方法二
+      var goodsData1 = _vue.default.observable(_objectSpread({},
+      goodsData, {
+        count: 1 }));
+
+      state.mockData.push(goodsData1);
     }
   } };
 
