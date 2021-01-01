@@ -105,7 +105,6 @@
 					}
 				})
 			}
-			
 		},
 		methods: {
 			toLogin(event){

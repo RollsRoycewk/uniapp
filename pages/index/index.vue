@@ -19,7 +19,7 @@
 			</view>
 		</scroll-view>
 		<!-- 轮播图 -->
-		<Slideshow></Slideshow>
+		<Recommend></Recommend>
 	</view>
 
 	
@@ -29,7 +29,7 @@
 	// 引入发送请求
 	// import ajax from "../../util/ajax.js"
 	// 引入轮播图组件
-	import Slideshow from "../../components/Slideshow/Slideshow.vue"
+	import Recommend from "../../components/recommend/recommend.vue"
 	import {mapState} from "vuex"
 	export default {
 		data() {
@@ -46,7 +46,7 @@
 			
 		},
 		components:{
-			Slideshow
+			Recommend
 		},
 		async mounted() {
 			// console.log(this.$store.state.home.msg)

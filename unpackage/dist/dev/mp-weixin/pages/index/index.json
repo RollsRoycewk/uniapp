@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "wangkaiZone",
   "usingComponents": {
-    "slideshow": "/components/Slideshow/Slideshow"
+    "recommend": "/components/recommend/recommend"
   }
 }
