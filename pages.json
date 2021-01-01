@@ -7,6 +7,12 @@
 			}
 		},
 		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
 			"path": "pages/personal/personal",
 			"style": {
 				"navigationBarTitleText": "个人中心"
